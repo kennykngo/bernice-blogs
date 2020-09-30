@@ -13,10 +13,16 @@ import {
 import PageRenderer from "./page-renderer";
 
 function App() {
+  // references Navigation.js Avatar > span
+  const user = {
+    firstName: "Bernice",
+    lastName: "Lam",
+  };
+
   return (
     <Router>
       <div className="App">
-        <Navigation />
+        <Navigation user={user} />
         <Switch>
           {/* Be able to render any dynamic page, without having to maintain nav Link components */}
           <Route path="/:page" component={PageRenderer} />
