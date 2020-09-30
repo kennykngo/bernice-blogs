@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   {
@@ -27,7 +28,9 @@ export default function Navigation() {
         {/* callback function that happens each time of iteration */}
         {/* returning a mapped element requires a key-value */}
         {navLinks.map((link, index) => (
-          <li key={index}>{link.title}</li>
+          <li key={index}>
+            <Link to={link.path}>{link.title}</Link>
+          </li>
         ))}
       </ul>
     </nav>
