@@ -1,0 +1,4 @@
+// reordering the scss with var on top and nav on bottom fixes issue
+@import "./variables";
+
+@import "./_navigation";
