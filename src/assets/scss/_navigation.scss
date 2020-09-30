@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     list-style-type: none;
-    margin-right: 20px;
+    padding-right: 20px;
 
     a {
       text-decoration: none;
@@ -71,11 +71,38 @@
       top: 65px;
       // be completely off the screen
       left: -300px;
-      left: 0px;
       transition: 300ms ease left;
+      // places avatar on top
+      flex-direction: column-reverse;
+      padding: 0;
+      padding-left: 30px;
+
+      a {
+        width: 100%;
+        padding: 0;
+      }
+
+      li {
+        height: 60px;
+        display: flex;
+        align-items: center;
+      }
+
+      ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+      }
+
+      ul,
+      li,
+      .menu-avatar-container {
+        width: 100%;
+      }
 
       // only activates when it has menu-content-container AND active class on the same element
       &.active {
+        left: 0px;
       }
     }
     .ion-ios-menu {
