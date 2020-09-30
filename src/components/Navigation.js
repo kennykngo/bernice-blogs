@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+// useState allows for having a variable and setting it
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
 
@@ -22,10 +23,13 @@ const navLinks = [
 ];
 
 export default function Navigation({ user }) {
+  // set to false so it doesn't open when we load page
+  const [menuActive, setMenuActive] = useState(false);
+
   return (
     <nav className="site-navigation">
       <span className="menu-title">Bernice Lam</span>
-      <div className="menu-content-container">
+      <div className={`menu-content-container ${menuActive && "active"}`}>
         <ul>
           {/* callback function that happens each time of iteration */}
           {/* returning a mapped element requires a key-value */}
@@ -44,6 +48,10 @@ export default function Navigation({ user }) {
           <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`}</span>
         </span>
       </div>
+      <i
+        className="ionicons icon ion-ios-menu"
+        onClick={() => setMenuActive(!menuActive)}
+      />
     </nav>
   );
 }
