@@ -21,6 +21,8 @@ export default function PostGrid({ posts }) {
     [current, pageSize, posts]
   );
 
+  // scrolls back after pagination change
+  // use useEffect() when mounting a component
   useEffect(() => {
     window.scroll({
       top: 500,

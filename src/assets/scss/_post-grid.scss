@@ -25,13 +25,14 @@
     overflow: hidden;
     // background-size: cover;
     // background-position: center center;
-    object-fit: fill;
+    // object-fit: fill;
+    object-fit: cover;
     // object-fit: scale-down;
     object-position: center center;
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    max-height: 280px;
+    // max-height: 280px;
     // min-height: 225px;
     overflow: hidden;
   }
@@ -47,6 +48,7 @@
 
     a {
       padding: 0 5px;
+      max-height: 280px;
     }
 
     .description-text {

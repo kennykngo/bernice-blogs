@@ -1,0 +1,11 @@
+{
+  "name": "react-blog-backend",
+  "version": "1.0.0",
+  "description": "A Koa and GraphQL backend for React Blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Kenny Ngo",
+  "license": "ISC"
+}

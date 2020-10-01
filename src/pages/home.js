@@ -58,11 +58,13 @@ export default function Home() {
           </section>
         </div>
       </section>
-      <section className="container home">
-        <div className="row">
-          <h1>Recent Posts</h1>
-          <PostGrid posts={recentPosts} />
-        </div>
+      <section className="bg-white">
+        <section className="container home">
+          <div className="row">
+            <h1>Recent Posts</h1>
+            <PostGrid posts={recentPosts} />
+          </div>
+        </section>
       </section>
       <section className="container home">
         <div className="row">
