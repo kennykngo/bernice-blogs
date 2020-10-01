@@ -1,4 +1,5 @@
 .masonry-post {
+  // post images
   position: relative;
   border-radius: 5px;
   overflow: hidden;
@@ -8,7 +9,7 @@
   width: 100%;
   text-decoration: none;
   margin: 0 auto;
-  min-height: 200px;
+  min-height: 225px;
 
   .image-text {
     height: 100%;

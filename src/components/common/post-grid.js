@@ -41,7 +41,7 @@ export default function PostGrid({ posts }) {
                 By:
                 <Link to={`/author/${post.author}`}>{post.author}</Link>
               </span>
-              <span>— {post.date}</span>
+              <span> — {post.date}</span>
             </p>
             <p className="description-text">{post.description}</p>
             <Link to={post.link}>Read More.</Link>
