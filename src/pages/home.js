@@ -1,5 +1,5 @@
 import React from "react";
-import { MasonryPost, PostMasonry } from "../components/common";
+import { MasonryPost, PostMasonry, PostGrid } from "../components/common";
 import trending from "../assets/mocks/trending";
 import featured from "../assets/mocks/featured";
 
@@ -33,8 +33,14 @@ const mergeStyles = function (posts, config) {
     // If index exists, assign value to post from masonry-post.js
     // merging styles
     post.style = config[index];
+    post.author = "Bernice Lam";
+    post.description =
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt ";
   });
 };
+
+// want each page to look different to display 9 posts on one page
+const recentPosts = [...trending, ...featured, ...featured];
 
 mergeStyles(trending, trendingConfig);
 mergeStyles(featured, featuredConfig);
@@ -43,17 +49,27 @@ const lastFeatured = featured.pop();
 
 export default function Home() {
   return (
-    <section className="container home">
-      <div className="row">
-        <h1> Featured Posts</h1>
-        <section className="featured-post-container">
-          <PostMasonry posts={featured} columns={2} tagsOnTop={true} />
-          <MasonryPost post={lastFeatured} tagsOnTop={true} />
-        </section>
-        <h1> Trending Posts</h1>
-        {/* Post masonry: give us our wrapper for the masonry css  */}
-        <PostMasonry posts={trending} columns={3} />
-      </div>
-    </section>
+    <main className="home">
+      <section className="container home">
+        <div className="row">
+          <section className="featured-posts-container">
+            <PostMasonry posts={featured} columns={2} tagsOnTop={true} />
+            <MasonryPost post={lastFeatured} tagsOnTop={true} />
+          </section>
+        </div>
+      </section>
+      <section className="container home">
+        <div className="row">
+          <h1>Recent Posts</h1>
+          <PostGrid posts={recentPosts} />
+        </div>
+      </section>
+      <section className="container home">
+        <div className="row">
+          {/* Post masonry: give us our wrapper for the masonry css  */}
+          <PostMasonry posts={trending} columns={3} />
+        </div>
+      </section>
+    </main>
   );
 }
