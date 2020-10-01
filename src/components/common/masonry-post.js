@@ -17,6 +17,7 @@ export default function MasonryPost({ post, tagsOnTop }) {
       <div
         className="image-text"
         // Allows featured to have tags on top and trending to have tags on bottom
+        // on home.js, tagsOnTop is set to true under Featured Posts
         style={{ justifyContent: tagsOnTop ? "space-between" : "flex-end" }}
       >
         <div className="tags-container">
