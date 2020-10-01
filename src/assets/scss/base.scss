@@ -1,6 +1,9 @@
 // reordering the scss with var on top and nav on bottom fixes issue
 @import "./variables";
-@import "./_navigation";
+@import "./navigation";
+@import "./home";
+@import "./masonry-post";
+@import "./post-masonry";
 
 // adds specificity to override the HTML
 html body {
