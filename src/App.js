@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navigation from "./components/Navigation";
+import Navigation from "./components/common/navigation";
 
 import "./assets/scss/base.scss";
 import {
