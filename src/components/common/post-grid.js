@@ -18,7 +18,7 @@ export default function PostGrid({ posts }) {
       return posts.slice(firstIndex, lastIndex);
     },
     // passes dependencies to the function to know when to update itself (changing current page or pageSize);
-    [current, pageSize]
+    [current, pageSize, posts]
   );
 
   return (
@@ -44,7 +44,7 @@ export default function PostGrid({ posts }) {
               <span> — {post.date}</span>
             </p>
             <p className="description-text">{post.description}</p>
-            <Link to={post.link}>Read More.</Link>
+            <Link to={post.link}>Read More...</Link>
           </div>
         ))}
       </section>
