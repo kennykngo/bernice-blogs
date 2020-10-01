@@ -1,0 +1,5 @@
+// increase specificity to take precedence over antd's style
+.grid-pagination-container {
+  .ant-pagination {
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Pagination } from "antd";
+import { TagRow } from "./";
 
 export default function PostGrid({ posts }) {
   // to show 9 records at a time
@@ -22,7 +23,31 @@ export default function PostGrid({ posts }) {
 
   return (
     <section className="grid-pagination-container">
-      <section className="post-grid container"></section>
+      <section className="post-grid container">
+        {paginatedPosts.map((post, index) => (
+          <div className="post-container">
+            <figure>
+              <Link to={post.link}>
+                <img
+                  src={require(`../../assets/images/${post.image}`)}
+                  alt={post.image}
+                />
+              </Link>
+            </figure>
+            <TagRow tags={post.categories} />
+            <h2>{post.title}</h2>
+            <p className="author-text">
+              <span>
+                By:
+                <Link to={`/author/${post.author}`}>{post.author}</Link>
+              </span>
+              <span>— {post.date}</span>
+            </p>
+            <p className="description-text">{post.description}</p>
+            <Link to={post.link}>Read More.</Link>
+          </div>
+        ))}
+      </section>
       <Pagination
         simple
         showSizeChanger

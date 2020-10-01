@@ -5,6 +5,9 @@
   display: flex;
   justify-content: space-between;
   color: $text-color;
+  position: fixed;
+  z-index: 100;
+  top: 0;
 
   .menu-title {
     font-size: 22px;
@@ -67,7 +70,8 @@
       // 65px is height of nav
       height: calc(100% - 65px);
       background: white;
-      position: absolute;
+      // doesn't clash with other elements
+      position: fixed;
       top: 65px;
       // be completely off the screen
       left: -300px;
