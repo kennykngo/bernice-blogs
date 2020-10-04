@@ -1,6 +1,8 @@
-const resolvers = [];
+const postsSchema = require("./posts");
 
-const typeDefs = [];
+const resolvers = [postsSchema.resolvers];
+
+const typeDefs = [postsSchema.schema];
 
 module.export = {
   resolvers,

@@ -1,0 +1,17 @@
+# have to define query types
+type Query {
+    trendingPosts: [Post]! # ! means that return at least an array
+    featuredPosts: [Post]!
+    recentPosts: [Post]!
+}
+
+
+
+type Post { 
+    id: Int,
+    title: String,
+    date: String,
+    categories: [String],
+    description: String,
+    image: String
+}
