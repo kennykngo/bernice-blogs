@@ -5,8 +5,7 @@ type Query {
     recentPosts: [Post]!
 }
 
-
-
+# how we define types (required)
 type Post { 
     id: Int,
     title: String,

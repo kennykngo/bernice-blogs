@@ -9,7 +9,7 @@ const server = new ApolloServer({
 });
 
 const app = new Koa();
-server.appleMiddleWare(app);
+server.appleMiddleWare({ app });
 
 app.listen({ port: PORT }, () => {
   console.log(`Server ready at http://localhost:${PORT + server.graphqlPath}`);
