@@ -4,7 +4,7 @@ const resolvers = [postsSchema.resolvers];
 
 const typeDefs = [postsSchema.schema];
 
-module.export = {
+module.exports = {
   resolvers,
   typeDefs,
 };
